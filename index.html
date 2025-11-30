@@ -125,12 +125,10 @@
                                 <label for="insuranceSlots" class="label-military">保险格数</label>
                                 <select id="insuranceSlots" name="insuranceSlots" class="select-military w-full" required="">
                                     <option value="">请选择保险格数</option>
-                                    <option value="1">1格</option>
                                     <option value="2">2格</option>
-                                    <option value="3">3格</option>
                                     <option value="4">4格</option>
-                                    <option value="5">5格</option>
                                     <option value="6">6格</option>
+                                    <option value="9">9格</option>
                                 </select>
                             </div>
                         </div>
@@ -140,15 +138,15 @@
                             <div>
                                 <label for="stamina" class="label-military">体力(训练中心)</label>
                                 <div class="flex items-center">
-                                    <input type="range" id="stamina" name="stamina" min="0" max="100" value="0" class="w-full h-2 bg-dark rounded-lg appearance-none cursor-pointer">
-                                    <span id="staminaValue" class="ml-3 text-light min-w-[3rem] text-center">0</span>
+                                    <input type="range" id="stamina" name="stamina" min="1" max="7" value="1" class="w-full h-2 bg-dark rounded-lg appearance-none cursor-pointer">
+                                    <span id="staminaValue" class="ml-3 text-light min-w-[3rem] text-center">1</span>
                                 </div>
                             </div>
                             <div>
                                 <label for="weight" class="label-military">负重(靶场等级)</label>
                                 <div class="flex items-center">
-                                    <input type="range" id="weight" name="weight" min="0" max="100" value="0" class="w-full h-2 bg-dark rounded-lg appearance-none cursor-pointer">
-                                    <span id="weightValue" class="ml-3 text-light min-w-[3rem] text-center">0</span>
+                                    <input type="range" id="weight" name="weight" min="1" max="7" value="1" class="w-full h-2 bg-dark rounded-lg appearance-none cursor-pointer">
+                                    <span id="weightValue" class="ml-3 text-light min-w-[3rem] text-center">1</span>
                                 </div>
                             </div>
                         </div>
@@ -201,6 +199,18 @@
                                     <input type="checkbox" id="knife_7" name="knifeSkin" value="信条" class="mr-2 accent-secondary">
                                     <label for="knife_7" class="text-light">信条 (S7)</label>
                                 </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="knife_8" name="knifeSkin" value="雷暴" class="mr-2 accent-secondary">
+                                    <label for="knife_8" class="text-light">雷暴 (S8)</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="knife_9" name="knifeSkin" value="量子刃" class="mr-2 accent-secondary">
+                                    <label for="knife_9" class="text-light">量子刃 (S9)</label>
+                                </div>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="knife_10" name="knifeSkin" value="暗物质" class="mr-2 accent-secondary">
+                                    <label for="knife_10" class="text-light">暗物质 (联动)</label>
+                                </div>
                             </div>
                         </div>
                         
@@ -227,6 +237,18 @@
                                     <div class="flex items-center">
                                         <input type="checkbox" id="operator_5" name="operatorSkin" value="能天使" class="mr-2 accent-secondary">
                                         <label for="operator_5" class="text-light">能天使 (佐娅)</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="operator_6" name="operatorSkin" value="夜行者" class="mr-2 accent-secondary">
+                                        <label for="operator_6" class="text-light">夜行者 (凯)</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="operator_7" name="operatorSkin" value="炽焰核心" class="mr-2 accent-secondary">
+                                        <label for="operator_7" class="text-light">炽焰核心 (霍克)</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="operator_8" name="operatorSkin" value="霓虹魅影" class="mr-2 accent-secondary">
+                                        <label for="operator_8" class="text-light">霓虹魅影 (新干员)</label>
                                     </div>
                                 </div>
                             </div>
@@ -270,6 +292,18 @@
                                         <input type="checkbox" id="gun_9" name="gunSkin" value="M7-棱镜攻势" class="mr-2 accent-secondary">
                                         <label for="gun_9" class="text-light">M7-棱镜攻势 (S7)</label>
                                     </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="gun_10" name="gunSkin" value="SCAR-量子风暴" class="mr-2 accent-secondary">
+                                        <label for="gun_10" class="text-light">SCAR-量子风暴 (S8)</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="gun_11" name="gunSkin" value="MP5-暗物质" class="mr-2 accent-secondary">
+                                        <label for="gun_11" class="text-light">MP5-暗物质 (S9)</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="gun_12" name="gunSkin" value="AWM-龙骑兵" class="mr-2 accent-secondary">
+                                        <label for="gun_12" class="text-light">AWM-龙骑兵 (联动)</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -290,51 +324,37 @@
                             </div>
                             <div>
                                 <label for="rentalPeriod" class="label-military">租期（天）</label>
-                                <input type="number" id="rentalPeriod" name="rentalPeriod" min="1" class="input-military w-full" placeholder="请输入租期" required="">
+                                <input type="number" id="rentalPeriod" name="rentalPeriod" min="1" class="input-military w-full" placeholder="自动计算" readonly>
                             </div>
                         </div>
 
-                        <!-- 联系方式 -->
-                        <div>
-                            <label for="contactNumber" class="label-military">联系号码</label>
-                            <input type="tel" id="contactNumber" name="contactNumber" class="input-military w-full" placeholder="请输入联系号码" required="">
-                        </div>
-
                         <!-- 提交按钮 -->
-                        <div class="flex justify-center mt-8">
-                            <button type="submit" id="submitBtn" class="btn-military text-lg flex items-center">
-                                <i class="fa fa-calculator mr-2"></i> 开始估价
+                        <div class="text-center mt-8">
+                            <button type="submit" class="btn-military text-xl px-8">
+                                <i class="fa fa-calculator mr-2"></i> 计算估值
                             </button>
                         </div>
                     </form>
                 </div>
             </div>
 
-            <!-- 右侧：估价结果 -->
+            <!-- 右侧：结果展示 -->
             <div class="lg:col-span-1 animate-fadeIn animate-delay-200">
+                <!-- 结果展示卡片 -->
                 <div class="card-military h-full flex flex-col">
                     <h2 class="text-2xl font-bold text-secondary mb-6 flex items-center">
-                        <i class="fa fa-line-chart mr-2"></i> 估价结果
+                        <i class="fa fa-bar-chart mr-2"></i> 估值结果
                     </h2>
                     
-                    <!-- 估价结果区域 -->
-                    <div id="resultArea" class="flex-grow flex flex-col justify-between">
-                        <!-- 初始状态 -->
-                        <div id="initialState" class="flex-grow flex flex-col items-center justify-center text-center">
-                            <img src="https://p11-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/ecd78d0ba8134c61827c2f231fb8a4b9.png~tplv-a9rns2rl98-24:720:720.png?rcl=20251130120006B41493E56C51FE0FE500&amp;rk3s=8e244e95&amp;rrcfp=8a172a1a&amp;x-expires=1765080007&amp;x-signature=WTakpIfKCQ9MNQin1QZ6KpFBmA0%3D" alt="三角洲行动" class="w-48 h-48 object-cover rounded-full mb-6 shadow-lg">
-                            <p class="text-light text-lg mb-4">请填写左侧表单信息</p>
-                            <p class="text-secondary text-xl font-bold">开始您的账号估价</p>
-                        </div>
-                        
-                        <!-- 加载状态 -->
-                        <div id="loadingState" class="hidden flex-grow flex flex-col items-center justify-center">
-                            <div class="w-16 h-16 border-4 border-secondary border-t-transparent rounded-full animate-spin mb-6"></div>
-                            <p class="text-secondary text-xl font-bold animate-pulse-slow">正在分析账号价值...</p>
-                        </div>
-                        
-                        <!-- 结果状态 -->
-                        <div id="resultState" class="hidden flex-grow flex flex-col justify-between">
-                            <!-- 租金比例和预估租金 -->
+                    <!-- 加载状态 -->
+                    <div id="loadingState" class="flex-1 flex flex-col items-center justify-center">
+                        <div class="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-secondary mb-4"></div>
+                        <p class="text-light text-lg">正在计算估值...</p>
+                    </div>
+                    
+                    <!-- 结果状态（默认隐藏） -->
+                    <div id="resultState" class="flex-1 hidden">
+                        <div class="space-y-6">
                             <div class="mb-6">
                                 <div class="flex justify-between items-center mb-3">
                                     <span class="text-light">租金比例</span>
@@ -407,26 +427,24 @@
                     </div>
                     <div>
                         <h3 class="text-xl font-bold text-secondary mb-2">如何提高账号估值？</h3>
-                        <p>提高等级、增加哈夫币数量、提升训练中心等级、拥有稀有皮肤和装备都可以提高账号估值。</p>
+                        <p>可以通过提升等级、增加哈夫币数量、获取稀有皮肤和装备、提高训练中心等级等方式提高账号估值。</p>
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-secondary mb-2">租金比例如何计算？</h3>
-                        <p>租金比例根据保险系数、体力、负重等多项指标综合计算，影响最终的预估租金。</p>
+                        <h3 class="text-xl font-bold text-secondary mb-2">保险格数有什么用？</h3>
+                        <p>保险格数越多，可以保护的游戏物品就越多，减少游戏中的损失风险，因此会影响账号的租赁价值。</p>
                     </div>
-                </div>
-                <div class="mt-8 text-center">
-                    <button id="closeHelpBtn2" class="btn-military">
-                        我知道了
-                    </button>
                 </div>
             </div>
         </div>
     </div>
 
     <script>
+        // 全局变量
+        let priceChart = null;
+        let isDarkTheme = true;
+        
         // DOM元素
         const valuationForm = document.getElementById('valuationForm');
-        const initialState = document.getElementById('initialState');
         const loadingState = document.getElementById('loadingState');
         const resultState = document.getElementById('resultState');
         const rentalRate = document.getElementById('rentalRate');
@@ -434,85 +452,83 @@
         const estimatedRent = document.getElementById('estimatedRent');
         const estimatedRentBar = document.getElementById('estimatedRentBar');
         const aiAnalysis = document.getElementById('aiAnalysis');
+        const staminaSlider = document.getElementById('stamina');
+        const staminaValue = document.getElementById('staminaValue');
+        const weightSlider = document.getElementById('weight');
+        const weightValue = document.getElementById('weightValue');
         const helpBtn = document.getElementById('helpBtn');
         const helpModal = document.getElementById('helpModal');
         const closeHelpBtn = document.getElementById('closeHelpBtn');
-        const closeHelpBtn2 = document.getElementById('closeHelpBtn2');
         const themeToggle = document.getElementById('themeToggle');
-        const staminaInput = document.getElementById('stamina');
-        const staminaValue = document.getElementById('staminaValue');
-        const weightInput = document.getElementById('weight');
-        const weightValue = document.getElementById('weightValue');
-        
-        // 全局变量
-        let isDarkTheme = true;
-        let priceChart = null;
+        const hafuCoinsInput = document.getElementById('hafuCoins');
+        const rentalPeriodInput = document.getElementById('rentalPeriod');
         
         // 初始化
-        function init() {
-            // 设置滑块初始值
-            staminaValue.textContent = staminaInput.value;
-            weightValue.textContent = weightInput.value;
-            
-            // 事件监听
-            valuationForm.addEventListener('submit', handleFormSubmit);
-            helpBtn.addEventListener('click', showHelpModal);
-            closeHelpBtn.addEventListener('click', hideHelpModal);
-            closeHelpBtn2.addEventListener('click', hideHelpModal);
-            themeToggle.addEventListener('click', toggleTheme);
-            staminaInput.addEventListener('input', updateStaminaValue);
-            weightInput.addEventListener('input', updateWeightValue);
+        document.addEventListener('DOMContentLoaded', () => {
+            // 初始化滑块显示值
+            staminaValue.textContent = staminaSlider.value;
+            weightValue.textContent = weightSlider.value;
             
             // 初始化图表
             initChart();
+            
+            // 监听哈夫币输入，自动计算租期
+            hafuCoinsInput.addEventListener('input', calculateRentalPeriod);
+        });
+        
+        // 自动计算租期
+        function calculateRentalPeriod() {
+            const hafuCoins = parseFloat(hafuCoinsInput.value) || 0;
+            // 1000万（10M）对应2天，自动计算租期
+            const rentalPeriod = Math.ceil((hafuCoins / 10) * 2);
+            rentalPeriodInput.value = rentalPeriod > 0 ? rentalPeriod : '';
         }
         
-        // 更新体力值显示
-        function updateStaminaValue() {
-            staminaValue.textContent = staminaInput.value;
-        }
+        // 监听滑块变化
+        staminaSlider.addEventListener('input', () => {
+            staminaValue.textContent = staminaSlider.value;
+        });
         
-        // 更新负重值显示
-        function updateWeightValue() {
-            weightValue.textContent = weightInput.value;
-        }
+        weightSlider.addEventListener('input', () => {
+            weightValue.textContent = weightSlider.value;
+        });
         
-        // 处理表单提交
-        function handleFormSubmit(e) {
+        // 表单提交处理
+        valuationForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // 显示加载状态
-            initialState.classList.add('hidden');
-            resultState.classList.add('hidden');
-            loadingState.classList.remove('hidden');
+            // 获取表单数据
+            const formData = new FormData(this);
             
-            // 模拟API请求延迟
+            // 收集多选的皮肤数据
+            const knifeSkins = Array.from(formData.getAll('knifeSkin'));
+            const operatorSkins = Array.from(formData.getAll('operatorSkin'));
+            const gunSkins = Array.from(formData.getAll('gunSkin'));
+            
+            // 组织数据
+            const data = {
+                kd: parseFloat(formData.get('kd')),
+                hafuCoins: parseFloat(formData.get('hafuCoins')),
+                level: parseInt(formData.get('level')),
+                insuranceSlots: parseInt(formData.get('insuranceSlots')),
+                stamina: parseInt(formData.get('stamina')),
+                weight: parseInt(formData.get('weight')),
+                awmBullets: parseInt(formData.get('awmBullets') || 0),
+                helmets: parseInt(formData.get('helmets') || 0),
+                armors: parseInt(formData.get('armors') || 0),
+                knifeSkins: knifeSkins,
+                operatorSkins: operatorSkins,
+                gunSkins: gunSkins,
+                deposit: parseFloat(formData.get('deposit') || 0),
+                rentalPeriod: parseInt(formData.get('rentalPeriod'))
+            };
+            
+            // 显示加载状态，隐藏结果
+            loadingState.classList.remove('hidden');
+            resultState.classList.add('hidden');
+            
+            // 模拟计算延迟
             setTimeout(() => {
-                // 获取表单数据
-                const formData = new FormData(valuationForm);
-                
-                // 获取多选框数据
-                const knifeSkins = Array.from(document.querySelectorAll('input[name="knifeSkin"]:checked')).map(cb => cb.value);
-                const operatorSkins = Array.from(document.querySelectorAll('input[name="operatorSkin"]:checked')).map(cb => cb.value);
-                const gunSkins = Array.from(document.querySelectorAll('input[name="gunSkin"]:checked')).map(cb => cb.value);
-                
-                const data = {
-                    kd: parseFloat(formData.get('kd')),
-                    hafuCoins: parseFloat(formData.get('hafuCoins')),
-                    level: parseInt(formData.get('level')),
-                    insuranceSlots: parseInt(formData.get('insuranceSlots')),
-                    stamina: parseInt(formData.get('stamina')),
-                    weight: parseInt(formData.get('weight')),
-                    awmBullets: parseInt(formData.get('awmBullets') || 0),
-                    helmets: parseInt(formData.get('helmets') || 0),
-                    armors: parseInt(formData.get('armors') || 0),
-                    knifeSkins: knifeSkins,
-                    operatorSkins: operatorSkins,
-                    gunSkins: gunSkins,
-                    deposit: parseFloat(formData.get('deposit') || 0),
-                    rentalPeriod: parseInt(formData.get('rentalPeriod'))
-                };
-                
                 // 计算估价结果
                 const result = calculateValuation(data);
                 
@@ -527,7 +543,7 @@
                 updateChart(result);
                 
             }, 2000);
-        }
+        });
         
         // 计算估价结果
         function calculateValuation(data) {
@@ -698,9 +714,9 @@
             }
             
             // 训练中心分析
-            if (data.stamina >= 80 && data.weight >= 80) {
+            if (data.stamina >= 6 && data.weight >= 6) {
                 analysisHTML += `<p class="mb-2"><span class="text-green-400">✓</span> <strong>训练中心等级优秀</strong>：体力(${data.stamina})和负重(${data.weight})均已高度开发，账号能力全面。</p>`;
-            } else if (data.stamina >= 50 && data.weight >= 50) {
+            } else if (data.stamina >= 4 && data.weight >= 4) {
                 analysisHTML += `<p class="mb-2"><span class="text-yellow-400">⚠</span> <strong>训练中心等级良好</strong>：体力(${data.stamina})和负重(${data.weight})有一定基础，仍有提升空间。</p>`;
             } else {
                 analysisHTML += `<p class="mb-2"><span class="text-red-400">✗</span> <strong>训练中心等级较低</strong>：建议提升体力(${data.stamina})和负重(${data.weight})以增强账号能力。</p>`;
@@ -848,20 +864,26 @@
             if (isDarkTheme) {
                 // 深色主题
                 body.style.backgroundImage = "url('https://p11-doubao-search-sign.byteimg.com/tos-cn-i-xv4ileqgde/e3c7b1ba10af4ff0bdcfd652f3a828b3~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1780026276&x-signature=e%2BnIMjVZT9bikqVFY%2BtnESStLV4%3D')";
-                overlay.classList.add('bg-overlay');
+                overlay.style.backgroundColor = "rgba(45, 62, 54, 0.85)";
                 themeToggle.innerHTML = '<i class="fa fa-moon-o mr-2"></i> 切换主题';
             } else {
                 // 浅色主题
                 body.style.backgroundImage = "url('https://p3-doubao-search-sign.byteimg.com/ecom-shop-material/rigyfuqt_m_9da27d422234d216227d2579f588a3a1_sx_594822_www800-800~tplv-be4g95zd3a-image.jpeg?rk3s=542c0f93&x-expires=1780026276&x-signature=OvpTWwe1%2BCSieJINXw%2F%2FAXohD7M%3D')";
-                overlay.classList.remove('bg-overlay');
-                overlay.classList.add('bg-opacity-90');
-                overlay.classList.add('bg-primary');
+                overlay.style.backgroundColor = "rgba(255, 255, 255, 0.85)";
                 themeToggle.innerHTML = '<i class="fa fa-sun-o mr-2"></i> 切换主题';
             }
         }
         
-        // 页面加载完成后初始化
-        document.addEventListener('DOMContentLoaded', init);
+        // 事件监听
+        helpBtn.addEventListener('click', showHelpModal);
+        closeHelpBtn.addEventListener('click', hideHelpModal);
+        themeToggle.addEventListener('click', toggleTheme);
+        
+        // 点击模态框外部关闭
+        helpModal.addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideHelpModal();
+            }
+        });
     </script>
-
 </body></html>
